@@ -33,4 +33,13 @@ public class MyTable {
 
     }
 
+    public static void createTable(int numbersOfElements){
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                JFrame.setDefaultLookAndFeelDecorated(true);
+                MyTable.createGUI();
+            }
+        });
+    }
+
 }
