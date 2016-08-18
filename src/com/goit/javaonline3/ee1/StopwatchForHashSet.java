@@ -1,5 +1,6 @@
 package com.goit.javaonline3.ee1;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -70,17 +71,17 @@ public class StopwatchForHashSet {
         return Double.toString(sum/100);
     }
 
-    public static Map<String, String> returnallMetricsForHashSet(int numbersOfElements){
-        Map<String, String> aggregationMap = new HashMap<>();
+    public static ArrayList<String>  returnallMetricsForHashSet(int numbersOfElements){
+        ArrayList<String> aggregationArray = new ArrayList<>();
 
-        aggregationMap.put("add", countAverageHashSetAdd(numbersOfElements));
-        aggregationMap.put("get", "");
-        aggregationMap.put("remove", countAverageHashSetRemoving(numbersOfElements));
-        aggregationMap.put("contains", countAverageHashSetContains(numbersOfElements));
-        aggregationMap.put("populate", countAverageHashSetPopulation(numbersOfElements));
-        aggregationMap.put("iterator.add", "");
-        aggregationMap.put("iterator.remove", "");
+        aggregationArray.add(countAverageHashSetAdd(numbersOfElements));
+        aggregationArray.add("");
+        aggregationArray.add(countAverageHashSetRemoving(numbersOfElements));
+        aggregationArray.add(countAverageHashSetContains(numbersOfElements));
+        aggregationArray.add(countAverageHashSetPopulation(numbersOfElements));
+        aggregationArray.add("");
+        aggregationArray.add("");
 
-        return aggregationMap;
+        return aggregationArray;
     }
 }

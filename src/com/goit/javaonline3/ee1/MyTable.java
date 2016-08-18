@@ -13,6 +13,7 @@ public class MyTable {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         String[] columnNames = {
+                "  ",
                 "add",
                 "get",
                 "remove",
@@ -37,9 +38,19 @@ public class MyTable {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 JFrame.setDefaultLookAndFeelDecorated(true);
-                MyTable.createGUI();
+                createGUI(createDataTable(numbersOfElements), "Table for " + numbersOfElements + " elements");
             }
         });
+    }
+
+    public static String[][] createDataTable(int numbersOfElements){
+        String[][] dataTable = new String[4][7];
+
+        dataTable[0][0] = "ArrayList";
+
+
+        return dataTable;
+
     }
 
 }

@@ -1,5 +1,6 @@
 package com.goit.javaonline3.ee1;
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Map;
@@ -70,17 +71,17 @@ public class StopwatchForTreeSet {
         return Double.toString(sum/100);
     }
 
-    public static Map<String, String> returnallMetricsForTreeSet(int numbersOfElements){
-        Map<String, String> aggregationMap = new TreeMap<>();
+    public static ArrayList<String> returnallMetricsForTreeSet(int numbersOfElements){
+        ArrayList<String> aggregationArray = new ArrayList<>();
 
-        aggregationMap.put("add", countAverageTreeSetAdd(numbersOfElements));
-        aggregationMap.put("get", "");
-        aggregationMap.put("remove", countAverageTreeSetRemoving(numbersOfElements));
-        aggregationMap.put("contains", countAverageTreeSetContains(numbersOfElements));
-        aggregationMap.put("populate", countAverageTreeSetPopulation(numbersOfElements));
-        aggregationMap.put("iterator.add", "");
-        aggregationMap.put("iterator.remove", "");
+        aggregationArray.add(countAverageTreeSetAdd(numbersOfElements));
+        aggregationArray.add("");
+        aggregationArray.add(countAverageTreeSetRemoving(numbersOfElements));
+        aggregationArray.add(countAverageTreeSetContains(numbersOfElements));
+        aggregationArray.add(countAverageTreeSetPopulation(numbersOfElements));
+        aggregationArray.add("");
+        aggregationArray.add("");
 
-        return aggregationMap;
+        return aggregationArray;
     }
 }

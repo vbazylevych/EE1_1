@@ -102,17 +102,17 @@ public class StopwatchForArrayList {
         return Double.toString(sum/100);
     }
 
-    public static  Map<String, String>  returnallMetricsForArrayList(int numbersOfElements){
-        Map<String, String> aggregationMap = new HashMap<>();
+    public static ArrayList<String> returnallMetricsForArrayList(int numbersOfElements){
+        ArrayList<String> aggregationArray = new ArrayList<>();
 
-        aggregationMap.put("add", countAverageArrayListAdd(numbersOfElements));
-        aggregationMap.put("get", countAverageArrayListGet(numbersOfElements));
-        aggregationMap.put("remove", countAverageArrayListRemoving(numbersOfElements));
-        aggregationMap.put("contains", countAverageArrayListContains(numbersOfElements));
-        aggregationMap.put("populate", countAverageArrayListPopulation(numbersOfElements));
-        aggregationMap.put("iterator.add", countAverageArrayListIteratorAdd(numbersOfElements));
-        aggregationMap.put("iterator.remove", "");
+        aggregationArray.add(countAverageArrayListAdd(numbersOfElements));
+        aggregationArray.add(countAverageArrayListGet(numbersOfElements));
+        aggregationArray.add(countAverageArrayListRemoving(numbersOfElements));
+        aggregationArray.add(countAverageArrayListContains(numbersOfElements));
+        aggregationArray.add(countAverageArrayListPopulation(numbersOfElements));
+        aggregationArray.add(countAverageArrayListIteratorAdd(numbersOfElements));
+        aggregationArray.add( "");
 
-        return aggregationMap;
+        return aggregationArray;
     }
 }

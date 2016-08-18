@@ -1,5 +1,6 @@
 package com.goit.javaonline3.ee1;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.Map;
@@ -101,18 +102,18 @@ public class StopwatchForLinkedList {
         return Double.toString(sum/100);
     }
 
-    public static Map<String, String> returnallMetricsForLinkedList(int numbersOfElements){
-        Map<String, String> aggregationMap = new HashMap<>();
+    public static ArrayList<String> returnallMetricsForLinkedList(int numbersOfElements){
+        ArrayList<String> aggregationArray = new ArrayList<>();
 
-        aggregationMap.put("add", countAverageLinkedListAdd(numbersOfElements));
-        aggregationMap.put("get", countAverageLinkedListGet(numbersOfElements));
-        aggregationMap.put("remove", countAverageLinkedListRemoving(numbersOfElements));
-        aggregationMap.put("contains", countAverageLinkedListContains(numbersOfElements));
-        aggregationMap.put("populate", countAverageLinkedListPopulation(numbersOfElements));
-        aggregationMap.put("iterator.add", countAverageLinkedListIteratorAdd(numbersOfElements));
-        aggregationMap.put("iterator.remove", "");
+        aggregationArray.add(countAverageLinkedListAdd(numbersOfElements));
+        aggregationArray.add(countAverageLinkedListGet(numbersOfElements));
+        aggregationArray.add(countAverageLinkedListRemoving(numbersOfElements));
+        aggregationArray.add(countAverageLinkedListContains(numbersOfElements));
+        aggregationArray.add(countAverageLinkedListPopulation(numbersOfElements));
+        aggregationArray.add(countAverageLinkedListIteratorAdd(numbersOfElements));
+        aggregationArray.add("");
 
-        return aggregationMap;
+        return aggregationArray;
     }
 
 }
