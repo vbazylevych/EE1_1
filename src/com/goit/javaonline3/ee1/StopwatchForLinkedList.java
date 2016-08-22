@@ -2,8 +2,6 @@ package com.goit.javaonline3.ee1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by vbazylevych on 8/18/2016.
@@ -13,7 +11,7 @@ public class StopwatchForLinkedList {
     public static String countAverageLinkedListPopulation(int numbersOfElements){
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             Populate.populateLinkedList(numbersOfElements);
             long finishTask = System.currentTimeMillis();
@@ -28,7 +26,7 @@ public class StopwatchForLinkedList {
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newLinkedList.add(100500);
             long finishTask = System.currentTimeMillis();
@@ -44,7 +42,7 @@ public class StopwatchForLinkedList {
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newLinkedList.get(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
@@ -59,7 +57,7 @@ public class StopwatchForLinkedList {
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newLinkedList.remove(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
@@ -75,7 +73,7 @@ public class StopwatchForLinkedList {
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newLinkedList.contains(100500);
             long finishTask = System.currentTimeMillis();
@@ -90,7 +88,7 @@ public class StopwatchForLinkedList {
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newLinkedList.add(numbersOfElements, 100500);
             long finishTask = System.currentTimeMillis();

@@ -1,9 +1,6 @@
 package com.goit.javaonline3.ee1;
 
-
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by vbazylevych on 8/9/2016.
@@ -13,7 +10,7 @@ public class StopwatchForArrayList {
     public static String countAverageArrayListPopulation(int numbersOfElements){
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             Populate.populateArrayList(numbersOfElements);
             long finishTask = System.currentTimeMillis();
@@ -28,7 +25,7 @@ public class StopwatchForArrayList {
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newArrayList.add(100500);
             long finishTask = System.currentTimeMillis();
@@ -44,7 +41,7 @@ public class StopwatchForArrayList {
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newArrayList.get(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
@@ -59,7 +56,7 @@ public class StopwatchForArrayList {
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newArrayList.remove(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
@@ -90,7 +87,7 @@ public class StopwatchForArrayList {
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newArrayList.add(numbersOfElements, 100500);
             long finishTask = System.currentTimeMillis();

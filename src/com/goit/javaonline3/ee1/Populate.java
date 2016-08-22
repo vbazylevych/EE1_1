@@ -9,39 +9,44 @@ import java.util.TreeSet;
  * Created by vbazylevych on 8/9/2016.
  */
 public class Populate {
-    public static ArrayList<Integer> populateArrayList(int numberOfElements){
-        ArrayList<Integer> NewArrayList = new ArrayList();
 
-        for(int i = 0; i < numberOfElements; i++) {
-            NewArrayList.add(i);
+    public static ArrayList<Integer> populateArrayList(int numberOfElements){
+        ArrayList<Integer> newArrayList = new ArrayList();
+
+        for (int i = 0; i < numberOfElements; i++) {
+            newArrayList.add(i);
         }
-        return NewArrayList;
+
+        return newArrayList;
     }
 
     public static LinkedList<Integer> populateLinkedList(int numberOfElements){
-        LinkedList<Integer> NewLinkedList = new LinkedList<>();
+        LinkedList<Integer> newLinkedList = new LinkedList<>();
 
-        for(int i = 0; i < numberOfElements; i++){
-            NewLinkedList.add(i);
+        for (int i = 0; i < numberOfElements; i++) {
+            newLinkedList.add(i);
         }
-        return  NewLinkedList;
+
+        return  newLinkedList;
     }
 
     public static HashSet<Integer> populateHashSet(int numberOfElements){
-        HashSet<Integer> NewHashSet = new HashSet<>();
+        HashSet<Integer> newHashSet = new HashSet<>();
 
-        for(int i = 0; i < numberOfElements; i++){
-            NewHashSet.add(i);
+        for (int i = 0; i < numberOfElements; i++) {
+            newHashSet.add(i);
         }
-        return NewHashSet;
+
+        return newHashSet;
     }
 
     public static TreeSet<Integer> populateTreeSet(int numberOfElements){
-      TreeSet<Integer> NewTreeSet = new TreeSet<>();
+        TreeSet<Integer> newTreeSet = new TreeSet<>();
 
-        for(int i = 0; i < numberOfElements; i++){
-            NewTreeSet.add(i);
+        for (int i = 0; i < numberOfElements; i++) {
+            newTreeSet.add(i);
         }
-        return NewTreeSet;
+
+        return newTreeSet;
     }
 }

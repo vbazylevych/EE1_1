@@ -2,8 +2,6 @@ package com.goit.javaonline3.ee1;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by vbazylevych on 8/18/2016.
@@ -13,7 +11,7 @@ public class StopwatchForHashSet {
     public static String countAverageHashSetPopulation(int numbersOfElements){
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             Populate.populateHashSet(numbersOfElements);
             long finishTask = System.currentTimeMillis();
@@ -28,7 +26,7 @@ public class StopwatchForHashSet {
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newHashSet.add(100500);
             long finishTask = System.currentTimeMillis();
@@ -44,7 +42,7 @@ public class StopwatchForHashSet {
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newHashSet.remove(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
@@ -60,7 +58,7 @@ public class StopwatchForHashSet {
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
         double sum = 0;
 
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
             newHashSet.contains(100500);
             long finishTask = System.currentTimeMillis();
