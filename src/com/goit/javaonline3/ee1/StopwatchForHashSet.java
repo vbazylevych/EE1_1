@@ -46,7 +46,7 @@ public class StopwatchForHashSet {
 
         for(int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
-            newHashSet.remove(numbersOfElements);
+            newHashSet.remove(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
@@ -74,6 +74,7 @@ public class StopwatchForHashSet {
     public static ArrayList<String>  returnallMetricsForHashSet(int numbersOfElements){
         ArrayList<String> aggregationArray = new ArrayList<>();
 
+        aggregationArray.add("HashSet");
         aggregationArray.add(countAverageHashSetAdd(numbersOfElements));
         aggregationArray.add("");
         aggregationArray.add(countAverageHashSetRemoving(numbersOfElements));

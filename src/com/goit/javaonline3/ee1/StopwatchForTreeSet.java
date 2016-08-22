@@ -46,7 +46,7 @@ public class StopwatchForTreeSet {
 
         for(int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
-            newTreeSet.remove(numbersOfElements);
+            newTreeSet.remove(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
@@ -74,6 +74,7 @@ public class StopwatchForTreeSet {
     public static ArrayList<String> returnallMetricsForTreeSet(int numbersOfElements){
         ArrayList<String> aggregationArray = new ArrayList<>();
 
+        aggregationArray.add("Treeset");
         aggregationArray.add(countAverageTreeSetAdd(numbersOfElements));
         aggregationArray.add("");
         aggregationArray.add(countAverageTreeSetRemoving(numbersOfElements));

@@ -46,7 +46,7 @@ public class StopwatchForArrayList {
 
         for(int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
-            newArrayList.get(numbersOfElements);
+            newArrayList.get(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
@@ -61,7 +61,7 @@ public class StopwatchForArrayList {
 
         for(int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
-            newArrayList.remove(numbersOfElements);
+            newArrayList.remove(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
@@ -105,13 +105,14 @@ public class StopwatchForArrayList {
     public static ArrayList<String> returnallMetricsForArrayList(int numbersOfElements){
         ArrayList<String> aggregationArray = new ArrayList<>();
 
+        aggregationArray.add("ArrayList");
         aggregationArray.add(countAverageArrayListAdd(numbersOfElements));
         aggregationArray.add(countAverageArrayListGet(numbersOfElements));
         aggregationArray.add(countAverageArrayListRemoving(numbersOfElements));
         aggregationArray.add(countAverageArrayListContains(numbersOfElements));
         aggregationArray.add(countAverageArrayListPopulation(numbersOfElements));
         aggregationArray.add(countAverageArrayListIteratorAdd(numbersOfElements));
-        aggregationArray.add( "");
+        aggregationArray.add(countAverageArrayListRemoving(numbersOfElements));
 
         return aggregationArray;
     }

@@ -46,7 +46,7 @@ public class StopwatchForLinkedList {
 
         for(int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
-            newLinkedList.get(numbersOfElements);
+            newLinkedList.get(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
@@ -61,7 +61,7 @@ public class StopwatchForLinkedList {
 
         for(int i = 0; i < 100; i++) {
             long startTask = System.currentTimeMillis();
-            newLinkedList.remove(numbersOfElements);
+            newLinkedList.remove(numbersOfElements - 1);
             long finishTask = System.currentTimeMillis();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
@@ -105,13 +105,14 @@ public class StopwatchForLinkedList {
     public static ArrayList<String> returnallMetricsForLinkedList(int numbersOfElements){
         ArrayList<String> aggregationArray = new ArrayList<>();
 
+        aggregationArray.add("LinkedList");
         aggregationArray.add(countAverageLinkedListAdd(numbersOfElements));
         aggregationArray.add(countAverageLinkedListGet(numbersOfElements));
         aggregationArray.add(countAverageLinkedListRemoving(numbersOfElements));
         aggregationArray.add(countAverageLinkedListContains(numbersOfElements));
         aggregationArray.add(countAverageLinkedListPopulation(numbersOfElements));
         aggregationArray.add(countAverageLinkedListIteratorAdd(numbersOfElements));
-        aggregationArray.add("");
+        aggregationArray.add(countAverageLinkedListRemoving(numbersOfElements));
 
         return aggregationArray;
     }

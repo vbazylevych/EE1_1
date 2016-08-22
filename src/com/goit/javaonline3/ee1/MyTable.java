@@ -2,6 +2,8 @@ package com.goit.javaonline3.ee1;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * Created by vbazylevych on 8/15/2016.
@@ -18,6 +20,7 @@ public class MyTable {
                 "get",
                 "remove",
                 "contains",
+                "populate",
                 "iterator.add",
                 "iterator.remove"
         };
@@ -27,7 +30,7 @@ public class MyTable {
         JScrollPane scrollPane = new JScrollPane(table);
 
         frame.getContentPane().add(scrollPane);
-        frame.setPreferredSize(new Dimension(450, 200));
+        frame.setPreferredSize(new Dimension(750, 150));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -44,13 +47,33 @@ public class MyTable {
     }
 
     public static String[][] createDataTable(int numbersOfElements){
-        String[][] dataTable = new String[4][7];
+        String[][] dataTable = new String[4][8];
 
-        dataTable[0][0] = "ArrayList";
+        ArrayList<String> currentArrayList = StopwatchForArrayList.returnallMetricsForArrayList(numbersOfElements);
 
+        for (int i = 0; i < 8; i++) {
+            dataTable[0][i] = currentArrayList.get(i);
+        }
+
+        ArrayList<String> currentLinkedList = StopwatchForLinkedList.returnallMetricsForLinkedList(numbersOfElements);
+
+        for (int i = 0; i < 8; i++) {
+            dataTable[1][i] = currentLinkedList.get(i);
+        }
+
+        ArrayList<String> currentHashSet = StopwatchForHashSet.returnallMetricsForHashSet(numbersOfElements);
+
+        for (int i = 0; i < 8; i++) {
+            dataTable[2][i] = currentHashSet.get(i);
+        }
+
+        ArrayList<String> currentTreeSet = StopwatchForTreeSet.returnallMetricsForTreeSet(numbersOfElements);
+
+        for (int i = 0; i < 8; i++) {
+            dataTable[3][i] = currentTreeSet.get(i);
+        }
 
         return dataTable;
-
     }
 
 }

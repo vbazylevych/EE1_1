@@ -1,3 +1,4 @@
+import com.goit.javaonline3.ee1.MyTable;
 import com.goit.javaonline3.ee1.StopwatchForArrayList;
 
 /**
@@ -10,11 +11,17 @@ public class Runner {
         System.out.println("1000000  " + StopwatchForArrayList.countAverageArrayListPopulation(1000000));
         System.out.println("__________________________________________________________________");*/
 
-        System.out.println("10000  " + StopwatchForArrayList.countAverageArrayListContains(10000));
-        System.out.println("100000  " + StopwatchForArrayList.countAverageArrayListContains(100000));
-        System.out.println("1000000  " + StopwatchForArrayList.countAverageArrayListContains(1000000));
+      //  System.out.println("10000  " + StopwatchForArrayList.countAverageArrayListContains(10000));
+    //    System.out.println("100000  " + StopwatchForArrayList.countAverageArrayListContains(100000));
+     // System.out.println("1000000  " + StopwatchForArrayList.countAverageArrayListGet(1000000));
 
        // StopwatchForArrayList.countAverageArrayListContains(1000000);
+
+        MyTable.createTable(10000);
+        MyTable.createTable(100000);
+        MyTable.createTable(1000000);
+
+
 
     }
 }
