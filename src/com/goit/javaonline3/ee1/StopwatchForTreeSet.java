@@ -9,64 +9,64 @@ import java.util.TreeSet;
 public class StopwatchForTreeSet {
     
     public static String countAverageTreeSetPopulation(int numbersOfElements){
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             Populate.populateTreeSet(numbersOfElements);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageTreeSetAdd(int numbersOfElements){
         TreeSet<Integer> newTreeSet = Populate.populateTreeSet(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newTreeSet.add(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newTreeSet.remove(numbersOfElements);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageTreeSetRemoving(int numbersOfElements){
         TreeSet<Integer> newTreeSet = Populate.populateTreeSet(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newTreeSet.remove(numbersOfElements - 1);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newTreeSet.add(100500);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageTreeSetContains(int numbersOfElements){
         TreeSet<Integer> newTreeSet = Populate.populateTreeSet(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newTreeSet.contains(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static ArrayList<String> returnallMetricsForTreeSet(int numbersOfElements){

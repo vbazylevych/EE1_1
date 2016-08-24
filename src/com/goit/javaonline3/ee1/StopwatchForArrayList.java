@@ -8,95 +8,95 @@ import java.util.ArrayList;
 public class StopwatchForArrayList {
 
     public static String countAverageArrayListPopulation(int numbersOfElements){
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             Populate.populateArrayList(numbersOfElements);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageArrayListAdd(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newArrayList.add(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newArrayList.remove(numbersOfElements);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageArrayListGet(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newArrayList.get(numbersOfElements - 1);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageArrayListRemoving(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newArrayList.remove(numbersOfElements - 1);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newArrayList.add(100500);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageArrayListContains(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for(int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newArrayList.contains(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageArrayListIteratorAdd(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newArrayList.add(numbersOfElements, 100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newArrayList.remove(numbersOfElements);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static ArrayList<String> returnallMetricsForArrayList(int numbersOfElements){

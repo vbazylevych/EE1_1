@@ -9,64 +9,64 @@ import java.util.HashSet;
 public class StopwatchForHashSet {
 
     public static String countAverageHashSetPopulation(int numbersOfElements){
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             Populate.populateHashSet(numbersOfElements);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageHashSetAdd(int numbersOfElements){
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newHashSet.add(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newHashSet.remove(numbersOfElements);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageHashSetRemoving(int numbersOfElements){
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newHashSet.remove(numbersOfElements - 1);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newHashSet.add(100500);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageHashSetContains(int numbersOfElements){
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newHashSet.contains(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static ArrayList<String>  returnallMetricsForHashSet(int numbersOfElements){

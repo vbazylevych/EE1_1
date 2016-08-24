@@ -9,95 +9,95 @@ import java.util.LinkedList;
 public class StopwatchForLinkedList {
     
     public static String countAverageLinkedListPopulation(int numbersOfElements){
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             Populate.populateLinkedList(numbersOfElements);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageLinkedListAdd(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newLinkedList.add(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newLinkedList.remove(numbersOfElements);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageLinkedListGet(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newLinkedList.get(numbersOfElements - 1);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageLinkedListRemoving(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newLinkedList.remove(numbersOfElements - 1);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newLinkedList.add(100500);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageLinkedListContains(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newLinkedList.contains(100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static String countAverageLinkedListIteratorAdd(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
-        double sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < 100; i++) {
-            long startTask = System.currentTimeMillis();
+            long startTask = System.nanoTime();
             newLinkedList.add(numbersOfElements, 100500);
-            long finishTask = System.currentTimeMillis();
+            long finishTask = System.nanoTime();
             long lagTime = finishTask - startTask;
             sum = sum + lagTime;
             newLinkedList.remove(numbersOfElements);
         }
 
-        return Double.toString(sum/100);
+        return Long.toString(sum/100);
     }
 
     public static ArrayList<String> returnallMetricsForLinkedList(int numbersOfElements){

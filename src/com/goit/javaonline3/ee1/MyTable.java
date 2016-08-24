@@ -9,6 +9,15 @@ import java.util.ArrayList;
  */
 public class MyTable {
 
+    public static void createTable(int numbersOfElements){
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                JFrame.setDefaultLookAndFeelDecorated(true);
+                createGUI(createDataTable(numbersOfElements), "Table for " + numbersOfElements + " elements");
+            }
+        });
+    }
+
     public static void createGUI( String[][] dataTable, String header) {
         JFrame frame = new JFrame(header);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,15 +41,6 @@ public class MyTable {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-    }
-
-    public static void createTable(int numbersOfElements){
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                JFrame.setDefaultLookAndFeelDecorated(true);
-                createGUI(createDataTable(numbersOfElements), "Table for " + numbersOfElements + " elements");
-            }
-        });
     }
 
     public static String[][] createDataTable(int numbersOfElements){
