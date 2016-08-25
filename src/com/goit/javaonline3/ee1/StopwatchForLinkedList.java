@@ -8,7 +8,7 @@ import java.util.LinkedList;
  */
 public class StopwatchForLinkedList {
     
-    public static String countAverageLinkedListPopulation(int numbersOfElements){
+    private static String countAverageLinkedListPopulation(int numbersOfElements){
         long sum = 0;
 
         for (int i = 0; i < 100; i++) {
@@ -22,7 +22,7 @@ public class StopwatchForLinkedList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageLinkedListAdd(int numbersOfElements){
+    private static String countAverageLinkedListAdd(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         long sum = 0;
 
@@ -38,7 +38,7 @@ public class StopwatchForLinkedList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageLinkedListGet(int numbersOfElements){
+    private static String countAverageLinkedListGet(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         long sum = 0;
 
@@ -53,7 +53,7 @@ public class StopwatchForLinkedList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageLinkedListRemoving(int numbersOfElements){
+    private static String countAverageLinkedListRemoving(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         long sum = 0;
 
@@ -69,7 +69,7 @@ public class StopwatchForLinkedList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageLinkedListContains(int numbersOfElements){
+    private static String countAverageLinkedListContains(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         long sum = 0;
 
@@ -84,7 +84,7 @@ public class StopwatchForLinkedList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageLinkedListIteratorAdd(int numbersOfElements){
+    private static String countAverageLinkedListIteratorAdd(int numbersOfElements){
         LinkedList<Integer> newLinkedList = Populate.populateLinkedList(numbersOfElements);
         long sum = 0;
 

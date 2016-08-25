@@ -18,7 +18,7 @@ public class MyTable {
         });
     }
 
-    public static void createGUI( String[][] dataTable, String header) {
+    private static void createGUI( String[][] dataTable, String header) {
         JFrame frame = new JFrame(header);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

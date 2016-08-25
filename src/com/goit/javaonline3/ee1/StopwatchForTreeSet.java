@@ -8,7 +8,7 @@ import java.util.TreeSet;
  */
 public class StopwatchForTreeSet {
     
-    public static String countAverageTreeSetPopulation(int numbersOfElements){
+    private static String countAverageTreeSetPopulation(int numbersOfElements){
         long sum = 0;
 
         for (int i = 0; i < 100; i++) {
@@ -22,7 +22,7 @@ public class StopwatchForTreeSet {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageTreeSetAdd(int numbersOfElements){
+    private static String countAverageTreeSetAdd(int numbersOfElements){
         TreeSet<Integer> newTreeSet = Populate.populateTreeSet(numbersOfElements);
         long sum = 0;
 
@@ -38,7 +38,7 @@ public class StopwatchForTreeSet {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageTreeSetRemoving(int numbersOfElements){
+    private static String countAverageTreeSetRemoving(int numbersOfElements){
         TreeSet<Integer> newTreeSet = Populate.populateTreeSet(numbersOfElements);
         long sum = 0;
 
@@ -54,7 +54,7 @@ public class StopwatchForTreeSet {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageTreeSetContains(int numbersOfElements){
+    private static String countAverageTreeSetContains(int numbersOfElements){
         TreeSet<Integer> newTreeSet = Populate.populateTreeSet(numbersOfElements);
         long sum = 0;
 

@@ -8,7 +8,7 @@ import java.util.HashSet;
  */
 public class StopwatchForHashSet {
 
-    public static String countAverageHashSetPopulation(int numbersOfElements){
+    private static String countAverageHashSetPopulation(int numbersOfElements){
         long sum = 0;
 
         for (int i = 0; i < 100; i++) {
@@ -22,7 +22,7 @@ public class StopwatchForHashSet {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageHashSetAdd(int numbersOfElements){
+    private static String countAverageHashSetAdd(int numbersOfElements){
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
         long sum = 0;
 
@@ -38,7 +38,7 @@ public class StopwatchForHashSet {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageHashSetRemoving(int numbersOfElements){
+    private static String countAverageHashSetRemoving(int numbersOfElements){
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
         long sum = 0;
 
@@ -54,7 +54,7 @@ public class StopwatchForHashSet {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageHashSetContains(int numbersOfElements){
+    private static String countAverageHashSetContains(int numbersOfElements){
         HashSet<Integer> newHashSet = Populate.populateHashSet(numbersOfElements);
         long sum = 0;
 

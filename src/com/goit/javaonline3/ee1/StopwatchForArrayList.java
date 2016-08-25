@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class StopwatchForArrayList {
 
-    public static String countAverageArrayListPopulation(int numbersOfElements){
+    private static String countAverageArrayListPopulation(int numbersOfElements){
         long sum = 0;
 
         for (int i = 0; i < 100; i++) {
@@ -21,7 +21,7 @@ public class StopwatchForArrayList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageArrayListAdd(int numbersOfElements){
+    private static String countAverageArrayListAdd(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         long sum = 0;
 
@@ -37,7 +37,7 @@ public class StopwatchForArrayList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageArrayListGet(int numbersOfElements){
+    private static String countAverageArrayListGet(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         long sum = 0;
 
@@ -52,7 +52,7 @@ public class StopwatchForArrayList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageArrayListRemoving(int numbersOfElements){
+    private static String countAverageArrayListRemoving(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         long sum = 0;
 
@@ -68,7 +68,7 @@ public class StopwatchForArrayList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageArrayListContains(int numbersOfElements){
+    private static String countAverageArrayListContains(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         long sum = 0;
 
@@ -83,7 +83,7 @@ public class StopwatchForArrayList {
         return Long.toString(sum/100);
     }
 
-    public static String countAverageArrayListIteratorAdd(int numbersOfElements){
+    private static String countAverageArrayListIteratorAdd(int numbersOfElements){
         ArrayList<Integer> newArrayList = Populate.populateArrayList(numbersOfElements);
         long sum = 0;
 
